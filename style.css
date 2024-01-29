@@ -1,0 +1,78 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url(./images/pexels-mikhail-nilov-7815116.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#model{
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    height: 45px;
+    width: 120px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animateModel;
+    animation-duration: .5s;
+    border-radius: 5px;
+}
+#close{
+    color: tomato;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 23px;
+}
+#WhereAmI{
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    transform: translate(-75);
+}
+#WhereAmI button{
+    height: 40px;
+    width: 200px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: 1.5px solid #fff;
+    border-radius: 7px;
+    font-size: 15px;
+    transition: .5s;
+}
+#WhereAmI button:hover{
+    height: 40px;
+    width: 200px;
+    color: #000;
+    cursor: pointer;
+    background: whitesmoke;
+    border: 1.5px solid #fff;
+    border-radius: 7px;
+}
+#model-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+@keyframes animateModel {
+    from{
+    top: -300px;
+    opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
